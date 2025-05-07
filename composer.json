@@ -11,6 +11,14 @@
     },
     "require": {
         "altorouter/altorouter": "^2.0",
-        "vlucas/phpdotenv": "^5.6"
+        "vlucas/phpdotenv": "^5.6",
+        "robmorgan/phinx": "^0.16.8",
+        "symfony/yaml": "^7.2"
+    },
+    "scripts": {
+        "phinx": "php vendor/bin/phinx",
+        "migrate": "php vendor/bin/phinx migrate --configuration=Database/Config/PhinxConfig.php",
+        "rollback": "php vendor/bin/phinx rollback --configuration=Database/Config/PhinxConfig.php",
+        "status": "php vendor/bin/phinx status --configuration=Database/Config/PhinxConfig.php"
     }
 }
