@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "vite-plugin-full-reload": "^1.2.0"
+  }
+}

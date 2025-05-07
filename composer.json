@@ -1,0 +1,16 @@
+{
+    "autoload": {
+        "files": ["config.php"],
+        "psr-4": {
+            "Controller\\": "src/Controller/",
+            "Middlewares\\": "src/Middlewares/",
+            "Helpers\\": "src/Helpers/",
+            "Router\\": "src/Router/",
+            "Config\\": "config/"
+        }
+    },
+    "require": {
+        "altorouter/altorouter": "^2.0",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
