@@ -1,10 +1,24 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "label": "rundev",
-            "type": "shell",
-            "command": "php -S localhost:8000 public/index.php"
-        }
+      {
+        "label": "start-php",
+        "type": "shell",
+        "command": "php -S localhost:8000 -t public",
+        "isBackground": true,
+        "problemMatcher": []
+      },
+      {
+        "label": "start-vite",
+        "type": "shell",
+        "command": "npx vite dev",
+        "isBackground": true,
+        "problemMatcher": []
+      },
+      {
+        "label": "rundev",
+        "dependsOn": ["start-php", "start-vite"],
+        "dependsOrder": "parallel"
+      }
     ]
 }
